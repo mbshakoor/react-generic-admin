@@ -1,0 +1,194 @@
+{
+  "options": [
+    {
+      "id": 1,
+      "name": "Phd"
+    },
+    {
+      "id": 2,
+      "name": "Masters" 
+    }
+  ],
+  "entity": {
+    "id": 23123726478,
+    "entityName": "Doctors",
+    "primaryKey": "id",
+    "columns": [
+      {
+        "name": "id",
+        "type": "number",
+        "isNull": false,
+        "isForiegnKey": false,
+        "visibleInList": false
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "isNull": false,
+        "isForiegnKey": false,
+        "visibleInList": true
+      },
+      {
+        "name": "gender",
+        "type": "string",
+        "isNull": false,
+        "isForiegnKey": false,
+        "visibleInList": true,
+        "enum": [
+          "Male",
+          "Female"
+        ]
+      },
+      {
+        "name": "joining_date",
+        "type": "date",
+        "isNull": false,
+        "visibleInList": true,
+        "minVal": "10-06-2022"
+      },
+      {
+        "name": "cnic",
+        "type": "string",
+        "isNull": false,
+        "visibleInList": true,
+        "minVal": 13,
+        "maxVal": 13
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "isNull": false,
+        "visibleInList": true
+      },
+      {
+        "name": "education",
+        "type": "number",
+        "isForiegnKey": true,
+        "ref": "/forignKeyValues",
+        "refCol": [
+          "id",
+          "education"
+        ],
+        "isNull": false,
+        "visibleInList": false
+      },
+      {
+        "name": "speciality",
+        "type": "string",
+        "isNull": false,
+        "visibleInList": true
+      },
+      {
+        "name": "country",
+        "type": "number",
+        "isForiegnKey": true,
+        "ref": "/forignKeyValues",
+        "refCol": [
+          "id",
+          "education"
+        ],
+        "isNull": false,
+        "visibleInList": false
+      },
+      {
+        "name": "username",
+        "type": "string",
+        "isNull": false,
+        "visibleInList": true
+      },
+      {
+        "name": "phone",
+        "type": "phone",
+        "isNull": false,
+        "visibleInList": false
+      }
+    ],
+    "data": [
+      {
+        "id": 1,
+        "name": "John",
+        "gender": "John",
+        "joining_date": "08-30-2022",
+        "cnic": "4210159637822",
+        "address": "Karachi",
+        "speciality": "Neurologist",
+        "phone": "03342345566",
+        "education": 8
+      },
+      {
+        "id": 1,
+        "name": "John",
+        "gender": "John",
+        "joining_date": "08-30-2022",
+        "cnic": "4210159637822",
+        "address": "Karachi",
+        "speciality": "Neurologist",
+        "phone": "03342345566",
+        "education": 8
+      },
+      {
+        "id": 1,
+        "name": "John",
+        "gender": "John",
+        "joining_date": "08-30-2022",
+        "cnic": "4210159637822",
+        "address": "Karachi",
+        "speciality": "Neurologist",
+        "phone": "03342345566",
+        "education": 8
+      },
+      {
+        "id": 1,
+        "name": "John",
+        "gender": "John",
+        "joining_date": "08-30-2022",
+        "cnic": "4210159637822",
+        "address": "Karachi",
+        "speciality": "Neurologist",
+        "phone": "03342345566",
+        "education": 8
+      }
+    ]
+  },
+  "singleEntity": {
+    "id": 1,
+    "name": "John",
+    "gender": "Male",
+    "joining_date": "08-30-2022",
+    "cnic": "4210159637822",
+    "address": "Karachi",
+    "speciality": "Neurologist",
+    "phone": "03342345566",
+    "education": 1,
+    "country": 1,
+    "username": "John"
+  },
+  "routes": [
+    {
+      "id": 1,
+      "entityName": "doctors",
+      "path": "/entity",
+      "name": "Doctors",
+      "layout": "/admin",
+      "methodType": "GET",
+      "createRoute": "/doctor/create",
+      "editRoute": "/doctor/edit/:id",
+      "delRoute": "/doctor/del/:id",
+      "getByIdRoute": "/singleEntity",
+      "parentId": 0
+    },
+    {
+      "id": 1,
+      "entityName": "hospital",
+      "path": "/entity",
+      "name": "Hospital",
+      "layout": "/admin",
+      "methodType": "GET",
+      "createRoute": "/hospital/create",
+      "editRoute": "/hospital/edit/:id",
+      "delRoute": "/hospital/del/id",
+      "getByIdRoute": "/singleEntity",
+      "parentId": 0
+    }
+  ]
+}
